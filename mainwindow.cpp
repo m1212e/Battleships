@@ -54,4 +54,13 @@ void MainWindow::on_startButton_clicked()
 {
     Board *b = new Board(8, 5, this);
     static_cast<QGridLayout *>(layout())->addWidget(b);
+    Board *b = new Board(8, 5, this);
+    layout()->addWidget(b);
+
+    static_cast<QGridLayout *>(ui->gridLayout_2)->addWidget(b, 1, 0, Qt::AlignCenter);
+    
+    for (QWidget *o : findChildren<QWidget *>()) {
+        std::cout << o->objectName().toStdString() << std::endl;
+    }
+    
 }
