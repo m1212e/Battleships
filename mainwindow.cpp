@@ -62,5 +62,5 @@ void MainWindow::on_startButton_clicked()
     for (QWidget *o : findChildren<QWidget *>()) {
         std::cout << o->objectName().toStdString() << std::endl;
     }
-    
+    static_cast<QGridLayout *>(ui->gridLayout)->addWidget(b, 0, 1, Qt::AlignCenter);
 }
